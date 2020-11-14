@@ -1,0 +1,45 @@
+
+
+{%  extends 'hendle/main.html' %}
+
+{% block content %}
+<br>
+<br>
+<div class="col-md">
+    <form action="." method='POST'>{% csrf_token %}
+
+
+  {{form.as_p}}
+  <button type="submit" name="Check">CHECK</button>
+  </form>
+</div>
+<br>
+<br>
+
+<div class="col-md-7">
+  <h5>RESULT</h5>
+  <hr>
+  <div class="card card-body">
+
+    <table class="table table-sm">
+      <tr>
+        {% for n in ans %}
+
+    {% if n == 0 %}
+        YOU ARE SAFE!
+    {% elif n == 1  %}
+        YOU ARE AT HIGH RISK!
+    {% else %}
+
+    {% endif %}
+  {% endfor %}
+
+      </tr>
+
+
+    </table>
+  </div>
+
+
+
+{% endblock %}

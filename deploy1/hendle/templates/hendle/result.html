@@ -1,0 +1,70 @@
+{%  extends 'hendle/main.html' %}
+
+{% block content %}
+
+	<br>
+
+      <style>
+      	.login-box{
+      width: 700px;
+      float: none;
+      margin: 80px auto;
+      background: rgba(211,211,211,0.5)
+       }
+      </style>
+    </head>
+    <body>
+    	<center>
+    		<br>
+
+      <h1>GET YOURSELF TESTED FOR PCOS HERE</h1>
+
+
+      <div class="login-box">
+      	<br><br>
+      <form action="{% url 'result' %}">
+
+   {% csrf_token %}
+   <!--<div class="col-md-4 col-sm-4"><label for="fname">R1:</label> </div> <input type="text" name="R1"><br><br>
+
+   <div class="col-md-4 col-sm-4"><label for="fname">Na:</label> </div> <input type="text" name="Na" ><br><br>
+
+   <div class="col-md-4 col-sm-4"><label for="fname">Mg:</label> </div> <input type="text" name='Mg'  ><br><br>
+   <div class="col-md-4 col-sm-4"><label for="lname">Al:</label> </div> <input type="text" name="Al" ><br><br>
+   <div class="col-md-4 col-sm-4"><label for="fname">Si:</label> </div> <input type="text"  name="Si"><br><br>
+   <div class="col-md-4 col-sm-4"><label for="lname">K:</label> </div> <input type="text"  name="K" ><br><br>
+   <div class="col-md-4 col-sm-4"><label for="fname">Ca:</label></div>  <input type="text"  name="Ca"><br><br>
+   <div class="col-md-4 col-sm-4"><label for="lname">Ba:</label> </div> <input type="text"  required name="Ba" ><br><br>
+   <div class="col-md-4 col-sm-4"><label for="lname">Te:</label> </div> <input type="text" name="Te" ><br><br> -->
+
+   <div class="col-md-4 col-sm-4"><label for="follicle_right">Right Follicle Count </label>  <input type="text" name="Follicle No. (R)"></div><br><br>
+
+   <div class="col-md-4 col-sm-4"><label for="follicle_left">Left Follicle Count </label> <input type="text" name="Follicle No. (L)" > </div><br><br>
+
+   <div class="col-md-4 col-sm-4"><label for="skin_darkening">Skin Darkening? </label>  <select name="Skin darkening (Y/N)" id="Skin darkening (Y/N)">
+       <option value="1">YES</option>
+        <option value="0">NO</option>
+    </select>
+  </div> <br><br>
+
+    <div class="col-md-4 col-sm-4"><label for="hair_growth">Hair Growth? </label> <select name="hair growth(Y/N)" id="hair growth(Y/N)">
+       <option value="1">YES</option>
+        <option value="0">NO</option>
+    </select></div> <br><br>
+
+   <div class="col-md-4 col-sm-4"><label for="weight_gain">Weight Gain? </label> <select name="Weight gain(Y/N)" id="Weight gain(Y/N)">
+       <option value="1">YES</option>
+        <option value="0">NO</option>
+    </select></div> <br><br>
+
+   <div class="col-md-4 col-sm-4"><label for="cycle">How many days your cycle last? </label><input type="text"  name="Cycle(R/I)" ></div><br><br>
+   <input type="submit" value="Check" >
+   <br>
+   <br>
+   </form>
+  </div>
+   <center>
+    </body>
+
+
+{% endblock %}
